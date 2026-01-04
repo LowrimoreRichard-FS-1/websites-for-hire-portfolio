@@ -1,382 +1,176 @@
-/* ======================================= */
-/* 1. CSS Custom Properties (Light Mode Base) */
-/* ======================================= */
+/* --- Global Styles & Dark Mode Variables --- */
 :root {
-    --primary-color: #007bff;
-    --accent-color: #28a745;
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --bg-color: #f4f4f4;
     --text-color: #333;
-    --background-color: #ffffff;
-    --card-background: #f8f9fa;
-    --border-radius: 8px;
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --text-color-fade: #ccc; /* NEW VARIABLE */
+    --card-bg: #ffffff;
+    --header-bg: #2c3e50;
+    --header-text: #ffffff;
 }
 
-/* ======================================= */
-/* 2. Global Reset and Typography */
-/* ======================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Specific colors for Dark Mode (Handled by your JS toggle) */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --card-bg: #2d2d2d;
+    --header-bg: #000000;
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
     color: var(--text-color);
-    background-color: var(--background-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 20px;
+    overflow: hidden;
 }
 
-h1, h2, h3, h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5em;
-    font-weight: 600;
-}
-
-/* ======================================= */
-/* 3. Header and Navigation (Flexbox) */
-/* ======================================= */
+/* --- Header & Navigation --- */
 header {
-    background-color: var(--card-background);
+    background: var(--header-bg);
+    color: var(--header-text);
     padding: 1rem 0;
-    box-shadow: var(--shadow-light);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
 }
 
 nav ul {
+    padding: 0;
     list-style: none;
-    display: flex;
-    gap: 15px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
 }
 
 nav a {
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: 500;
-    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a.active {
-    background-color: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* Style the Dark Mode Toggle Button */
 #theme-toggle {
-    background: none;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 1.2rem;
-    line-height: 1;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 20px;
 }
 
-#theme-toggle:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: scale(1.1);
-}
-
-/* ======================================= */
-/* 4. Layout Sections (Hero, Features Grid) */
-/* ======================================= */
-/* --- REFINEMENT: main.container now handles all padding/lift for content pages --- */
-main.container {
-    padding: 20px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: var(--border-radius); /* Applied standard 8px radius */
-    box-shadow: var(--shadow-light); /* Soft shadow for lift */
-    background-color: var(--background-color); /* Ensures correct background color */
-}
-
+/* --- Hero Section --- */
 #hero {
-    padding: 4rem 0;
     text-align: center;
-    background-color: var(--card-background);
-    margin: 20px 0;
-    border-radius: var(--border-radius);
-    box-shadow: none;
+    padding: 60px 20px;
+    background: var(--secondary-color);
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-/* --- REFINEMENT: Dedicated Contact Info Styling --- */
-.contact-info {
-    margin-top: 3rem; 
-    padding-top: 1rem; 
-    border-top: 1px solid var(--text-color-fade);
-}
-
-/* --- CTA BUTTON STYLE (REGULAR) - HIGH CONTRAST FIX --- */
 .cta-button {
     display: inline-block;
-    background-color: #004085; /* Dark Blue for high contrast */
-    color: white; 
-    padding: 12px 30px;
-    border-radius: var(--border-radius);
-    margin-top: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
-/* --- CTA BUTTON STYLE (HOVER) - HIGH CONTRAST FIX --- */
-.cta-button:hover {
-    background-color: #002752; /* Even darker blue for hover effect */
-    color: white; /* Text remains white for maximum contrast */
-    transform: translateY(-2px);
-}
-
-/* CSS Grid for Feature/Principle Display */
-.feature-grid {
+/* --- NEW: Featured Project Grid (Home Page) --- */
+.home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    padding: 2rem 0;
+    margin: 40px 0;
 }
 
-.feature-item {
-    background-color: var(--card-background);
-    padding: 25px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
-    transition: transform 0.3s;
+.project-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.feature-item:hover {
-    transform: translateY(-5px);
+.project-card:hover {
+    transform: translateY(-10px);
 }
 
-/* ======================================= */
-/* 5. Form Styling */
-/* ======================================= */
-#contact-form {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--card-background);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+.project-card img {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-    background-color: white;
-    color: var(--text-color);
+    height: 250px;
+    object-fit: cover; /* Keeps images perfectly sized */
+    display: block;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+.card-text {
+    padding: 20px;
+    text-align: center;
 }
 
-.error-message {
-    color: #dc3545;
-    font-size: 0.9em;
-    margin-top: 0.5rem;
-    display: none;
+.card-text h4 {
+    margin: 0 0 10px 0;
 }
 
-/* ======================================= */
-/* 6. Footer */
-/* ======================================= */
+/* --- NEW: Introduction Highlight (Second Page) --- */
+.intro-highlight {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.intro-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.image-caption {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* --- Footer --- */
 footer {
-    background-color: var(--text-color); /* Dark background in light mode */
-    color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 30px;
+    margin-top: 40px;
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; 
-    gap: 15px;
-}
-
-.footer-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-nav a {
-    color: white; /* Ensures links are visible on dark background */
-    font-weight: 300;
-    padding: 5px 0;
-}
-
-.footer-nav a:hover {
-    color: var(--primary-color);
-}
-
-.copyright {
-    font-size: 0.9em;
-}
-
-/* ======================================= */
-/* 7. DARK MODE STYLES */
-/* ======================================= */
-body.dark-mode {
-    /* Define Dark Mode variables */
-    --primary-color: #66b3ff;
-    --accent-color: #a4e6b5;
-    --text-color: #f1f1f1;
-    --background-color: #121212;
-    --card-background: #1e1e1e;
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --text-color-fade: #444; /* NEW VARIABLE for dark mode border */
-    
-    /* Apply theme colors to the entire body and main elements */
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-/* --- EXPLICIT DARK MODE FOOTER STYLE --- */
-body.dark-mode footer {
-    background-color: var(--card-background); /* Use the card background for distinction */
-    color: var(--text-color); /* Ensures the copyright text is light */
-}
-
-/* Apply dark background to elements that had white backgrounds */
-body.dark-mode header,
-body.dark-mode .feature-item,
-body.dark-mode #contact-form,
-body.dark-mode #hero {
-    background-color: var(--card-background);
-    box-shadow: var(--shadow-light);
-}
-
-/* Adjustments for dark mode inputs/selects */
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea {
-    background-color: #2c2c2c;
-    color: var(--text-color);
-    border: 1px solid #444;
-}
-
-body.dark-mode input:focus,
-body.dark-mode select:focus,
-body.dark-mode textarea:focus {
-    border-color: var(--primary-color);
-}
-
-body.dark-mode a {
-    color: var(--primary-color);
-}
-
-body.dark-mode nav a.active {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-/* Adjust dark mode footer links */
-body.dark-mode .footer-nav a {
-    color: var(--text-color); /* Use light text color for links */
-}
-
-/* Adjust dark mode main container */
-body.dark-mode main.container {
-    background-color: var(--background-color);
-}
-
-/* ======================================= */
-/* 8. Media Queries (Responsiveness) */
-/* ======================================= */
-@media (max-width: 768px) {
-    /* Header Stacked on Mobile */
-    header .container {
-        flex-direction: column;
+/* Mobile Responsiveness */
+@media(max-width: 768px) {
+    header h1, nav, nav li {
+        float: none;
         text-align: center;
-        gap: 10px;
+        display: block;
+        margin: 10px 0;
     }
-
-    /* Header Nav */
-    nav ul {
-        margin-top: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    /* Footer Stacked on Mobile */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .copyright {
-        order: 2; /* Pushes copyright below navigation on mobile */
-        margin-top: 15px;
-    }
-}
-
-.contact-info {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: var(--card-bg); /* This uses your existing dark/light mode colors */
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.contact-info h2 {
-  color: #007bff;
-  margin-top: 0;
 }

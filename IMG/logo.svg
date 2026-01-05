@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M82 18 L18 82" stroke="currentColor" stroke-width="1" fill="none"/>
-  <path d="M50 20 L71 29 L80 50 L71 71 L50 80 L29 71 L20 50 L29 29 Z M50 35 L60 40 L65 50 L60 60 L50 65 L40 60 L35 50 L40 40 Z" stroke="currentColor" stroke-width="1" fill="none"/>
-  <circle cx="50" cy="50" r="6" fill="currentColor"/>
-  <circle cx="50" cy="40" r="4" fill="currentColor"/>
-  <path d="M46 38 Q35 30 30 45 M54 38 Q65 30 70 45 M45 48 Q30 45 25 60 M55 48 Q70 45 75 60" stroke="currentColor" stroke-width="2" fill="none"/>
+  <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M82 18 L18 82" stroke="#cccccc" stroke-width="1" fill="none"/>
+  <path d="M50 20 L71 29 L80 50 L71 71 L50 80 L29 71 L20 50 L29 29 Z M50 35 L60 40 L65 50 L60 60 L50 65 L40 60 L35 50 L40 40 Z" stroke="#cccccc" stroke-width="1" fill="none"/>
+  <circle cx="50" cy="50" r="6" fill="#3498db"/>
+  <circle cx="50" cy="40" r="4" fill="#3498db"/>
+  <path d="M46 38 Q35 30 30 45 M54 38 Q65 30 70 45 M45 48 Q30 45 25 60 M55 48 Q70 45 75 60" stroke="#3498db" stroke-width="2" fill="none"/>
 </svg>

@@ -21,7 +21,7 @@
     border: 3px solid #e9ecef;
 }
 
-/* 2. Base Styles & Dark Mode */
+/* 2. Base Styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -32,12 +32,13 @@ body {
     overflow-x: hidden;
 }
 
+/* DARK MODE FIX: This ensures all variables update when .dark-mode is active */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
 }
 
-/* 3. Header & Navigation (Div contains Nav) */
+/* 3. Header & Navigation */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
@@ -45,16 +46,17 @@ body.dark-mode {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: var(--transition);
 }
 
 body.dark-mode .header-main-container {
-    background: #000;
+    background: #000000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .nav-container {
     display: flex;
-    flex-direction: column; /* Small screens stack */
+    flex-direction: column; /* Mobile first */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -71,7 +73,7 @@ body.dark-mode .header-main-container {
 .nav-links {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Wraps links on tiny phones */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding: 0;
@@ -89,7 +91,7 @@ body.dark-mode .header-main-container {
 
 .nav-links a.active, .nav-links a:hover {
     background: var(--primary);
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
 /* 4. Hero Cards & Form Styles */
@@ -101,9 +103,14 @@ body.dark-mode .header-main-container {
     margin: 40px auto;
     max-width: 800px;
     text-align: center;
+    transition: var(--transition);
 }
 
-body.dark-mode .hero-card { background: var(--card-bg-dark); }
+/* Ensures cards change color in dark mode */
+body.dark-mode .hero-card {
+    background: var(--card-bg-dark);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
 form {
     display: flex;
@@ -119,6 +126,13 @@ input, textarea {
     width: 100%;
     box-sizing: border-box;
     font-family: inherit;
+    background: #fff;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+    background: #444;
+    border-color: #555;
+    color: #fff;
 }
 
 .btn-primary {
@@ -142,6 +156,7 @@ input, textarea {
     border-right: 3px solid var(--primary);
     animation: blink 0.7s infinite;
 }
+
 @keyframes blink { 50% { border-color: transparent; } }
 
 .reveal {
@@ -149,12 +164,13 @@ input, textarea {
     transform: translateY(40px);
     transition: 1s cubic-bezier(0.5, 1, 0.89, 1);
 }
+
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* 6. Responsive Adjustments (Desktop) */
+/* 6. Desktop View Adjustment */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }

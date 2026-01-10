@@ -1,231 +1,72 @@
-/* --- Global Styles & Dark Mode Variables --- */
+
+/* --- styles.css --- */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --bg-color: #f4f4f4;
-    --text-color: #333;
-    --card-bg: #ffffff;
-    --header-bg: #2c3e50;
-    --header-text: #ffffff;
+    --primary: #2ecc71;
+    --bg-dark: #1a1a1a;
+    --text-light: #f4f4f4;
 }
 
-/* Specific colors for Dark Mode (Handled by your JS toggle) */
-body.dark-mode {
-    --bg-color: #1a1a1a;
-    --text-color: #f4f4f4;
-    --card-bg: #2d2d2d;
-    --header-bg: #000000;
+/* 1. Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #222; }
+::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
+    border-radius: 5px; 
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+/* 2. Hero Section & Typing Cursor */
+.typing-text {
+    color: var(--primary);
+    border-right: 3px solid var(--primary);
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-    overflow: hidden;
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
-/* --- Header & Navigation --- */
-header {
-    background: var(--header-bg);
-    color: var(--header-text);
-    padding: 1rem 0;
+/* 3. Navigation (Inside the container div per instructions) */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0,0,0,0.8);
 }
 
-header h1 {
-    float: left;
-    margin: 0;
-}
-
-nav {
-    float: right;
-    margin-top: 10px;
-}
-
-nav ul {
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-#theme-toggle {
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-left: 20px;
-}
-
-/* --- Hero Section --- */
-#hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--secondary-color);
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* --- NEW: Featured Project Grid (Home Page) --- */
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* Keeps images perfectly sized */
-    display: block;
-}
-
-.card-text {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-text h4 {
-    margin: 0 0 10px 0;
-}
-
-/* --- NEW: Introduction Highlight (Second Page) --- */
-.intro-highlight {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.intro-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.image-caption {
-    margin-top: 15px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-/* --- Footer --- */
-footer {
-    padding: 30px;
-    margin-top: 40px;
-    background: var(--secondary-color);
-    color: #fff;
-    text-align: center;
-}
-
-/* Mobile Responsiveness */
-@media(max-width: 768px) {
-    header h1, nav, nav li {
-        float: none;
-        text-align: center;
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-/* --- Services Section Styles --- */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.nav-links {
+    display: flex;
     gap: 20px;
 }
 
-.service-card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: box-shadow 0.3s ease;
+.nav-links a.active {
+    color: var(--primary);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
 }
 
-.service-card:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.service-card h4 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.service-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Mobile Responsive Adjustments */
+/* 4. Mobile Optimization (Pixel 7) */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column !important; /* Forces logo and nav to stack */
+    .nav-links {
+        display: none; /* Toggle this via JS */
+        flex-direction: column;
+        width: 100%;
         text-align: center;
-        padding: 20px 10px;
     }
+    .nav-links.active {
+        display: flex;
+    }
+}
 
-    nav ul {
-        flex-direction: column !important; /* Stacks the 7 links vertically */
-        gap: 15px; /* Adds space so links are easy to tap */
-        margin-top: 20px;
-        padding: 0;
-    }
+/* 5. Scroll-in Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s all ease;
+}
 
-    .logo-group {
-        margin-bottom: 10px;
-    }
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

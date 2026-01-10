@@ -3,90 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional web development services offering modern, responsive, and interactive website solutions for hire this the form page you can contact me here.">    
-    <title>Contact Form - Websites For Hire</title>
+    <title>Contact | Websites For Hire</title>
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" type="image/svg+xml" href="IMG/logo.svg">
 </head>
 <body>
-    <header>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <div class="logo-group" style="display: flex; align-items: center; gap: 10px;">
-            <img src="IMG/logo.svg" alt="Websites For Hire Spider Logo" style="width: 40px; height: 40px;">
-            <h1 style="margin: 0;">Websites For Hire</h1>
-        </div>
-        <nav>
-            <ul style="display: flex; list-style: none; gap: 15px; margin: 0; padding: 0;">
+    <div class="header-main-container">
+        <nav class="nav-container">
+            <h1 class="brand-name">Websites For Hire</h1>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="second-page.html">Introduction</a></li>
-                <li><a href="form-page.html" class="active">Form</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="responsive-design.html">Responsive</a></li>
+                <li><a href="form-page.html">Form</a></li>
+                <li><a href="responsive-design.html">Responsive Design</a></li>
                 <li><a href="modern-css.html">Modern CSS</a></li>
                 <li><a href="interactive-js.html">Interactive JS</a></li>
             </ul>
+            <button id="theme-toggle">🌙</button>
         </nav>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </div>
-</header>
+
     <main class="container">
-        <section class="contact-info">
-  <h2>Get In Touch</h2>
-  <p><strong>Email:</strong> richardlowrimore22@gmail.com</p>
-  <p><strong>Location:</strong> Available for remote work worldwide</p>
-  <p><strong>Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
-</section>        
-        <form action="https://formspree.io/f/mrebydbw" method="POST">
-<input type="hidden" name="_next" value="https://lowrimorerichard-fs-1.github.io/websites-for-hire/success.html">            
-            <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <div id="nameError" class="error-message"></div>
-    </div>
-
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <div id="emailError" class="error-message"></div>
-    </div>
-
-    <div class="form-group">
-        <label for="subject">Subject</label>
-        <select id="subject" name="subject" required>
-            <option value="">-- Select a Subject --</option>
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Sales/Project Inquiry">Sales/Project Inquiry</option>
-            <option value="Feedback/Support">Feedback/Support</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <div id="messageError" class="error-message"></div>
-    </div>
-
-    <button type="submit" class="cta-button">Submit Form</button>
-</form>    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2026 Websites For Hire. All rights reserved.</p>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="second-page.html">Introduction</a></li>
-                        <li><a href="form-page.html">Form</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="responsive-design.html">Responsive</a></li>
-                        <li><a href="modern-css.html">Modern CSS</a></li>
-                        <li><a href="interactive-js.html">Interactive JS</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
+        <section class="hero-card reveal">
+            <h2>Get In Touch</h2>
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-primary">Send via Formspree</button>
+            </form>
+        </section>
+    </main>
 
     <script src="JS/script.js"></script>
 </body>

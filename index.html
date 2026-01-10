@@ -3,112 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional web development services offering modern, responsive, and interactive website solutions for hire.">
-    <title>Homepage - Websites For Hire</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" type="image/svg+xml" href="IMG/logo.svg">
+    <title>Websites For Hire | Professional Web Dev</title>
+    <meta name="description" content="Affordable and professional website design services. Optimized for speed and accessibility.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        
-        <div class="logo-group" style="display: flex; align-items: center; gap: 10px;">
-            <img src="IMG/logo.svg" alt="Websites For Hire Spider" Logo style="width: 30px; height: 30px;">                          
-            <h1 style="margin: 0;">Websites For Hire</h1>
-        </div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="second-page.html">Introduction</a></li>
-                <li><a href="form-page.html">Form</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="responsive-design.html">Responsive</a></li>
-                <li><a href="modern-css.html">Modern CSS</a></li>
-                <li><a href="interactive-js.html">Interactive JS</a></li>                             </ul>
-        </nav>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-    </div>
-</header>
-    <main class="container">
-        <section id="hero">
-            <h2>Welcome to Websites For Hire</h2>
-            <p>This is the foundation for your modern, responsive, multi-page website.</p>
-            <a href="second-page.html" class="cta-button">Explore More</a>
-        </section>
-
-        <section id="featured-projects" style="margin-top: 40px;">
-            <h3 style="text-align: center; margin-bottom: 30px;">Featured Projects</h3>
-            <div class="home-grid">
-                
-                <div class="project-card">
-                    <img src="IMG/office.jpg" alt="Mockup of a clean, professional workspace showing a desktop computer with a responsive website layout">
-                    <div class="card-text">
-                        <h4>Professional Solutions</h4>
-                        <p>Custom designs built for high performance and scalability.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="IMG/tech.jpg" alt="Close-up of computer code on a screen representing modern web development standards">
-                    <div class="card-text">
-                        <h4>Cutting-Edge Tech</h4>
-                        <p>Utilizing the latest HTML5, CSS3, and JavaScript features.</p>
-                    </div>
-                </div>
-
+    <div class="header-main-container">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="spider-logo.png" alt="Websites For Hire Spider Logo" width="50">
             </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="second-page.html">Intro</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Building <span class="typing-text"></span></h1>
+            <p>Your vision, coded to perfection.</p>
         </section>
 
-        <section id="features">
-            <h3>Key Features</h3>
-            <div class="feature-grid">
-                </div>
+        <section class="content reveal">
+            <h2>Why Choose Us?</h2>
+            <p>We build accessible, high-performance websites...</p>
         </section>
-        <section id="services" style="margin-top: 60px; padding-bottom: 40px;">
-    <h3 style="text-align: center; margin-bottom: 30px;">Professional Web Services</h3>
-    <div class="services-grid">
-        
-        <div class="service-card">
-    <div class="service-icon">🌐</div>
-    <h4>Custom Multi-Page Websites</h4>
-    <p>From high-converting landing pages to full-scale, multi-page business sites designed for growth and professional branding.</p>
-</div>
-        <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h4>Responsive Redesigns</h4>
-            <p>Transforming outdated websites into modern, mobile-friendly experiences that look great on any screen.</p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📩</div>
-            <h4>Business Integrations</h4>
-            <p>Adding functional contact forms, dark mode toggles, and interactive elements to keep users engaged.</p>
-        </div>
-
-    </div>
-    
-    <div style="text-align: center; margin-top: 30px;">
-        <p><strong>Currently accepting new freelance projects!</strong></p>
-        <a href="form-page.html" class="cta-button">Get a Free Quote</a>
-    </div>
-</section>    
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2026 Websites For Hire. All rights reserved.</p>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="second-page.html">Introduction</a></li>
-                        </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-
-    <script src="JS/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

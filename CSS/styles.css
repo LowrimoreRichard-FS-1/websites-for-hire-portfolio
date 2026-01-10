@@ -174,3 +174,66 @@ body.dark-mode input, body.dark-mode textarea {
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }
+
+/* --- Footer Styles --- */
+footer {
+    background-color: #222; /* Professional dark footer */
+    color: #fff;
+    padding: 3rem 5% 1rem 5%;
+    margin-top: 50px;
+    transition: var(--transition);
+}
+
+body.dark-mode footer {
+    background-color: #000;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacked for mobile */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h4 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Footer Desktop View */
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for PC */
+    }
+}

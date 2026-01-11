@@ -1,42 +1,35 @@
-/* --- CSS/styles.css --- */
 :root {
     --primary: #007bff;
     --primary-dark: #0056b3;
-    --accent: #2ecc71;
     --bg-light: #f8f9fa;
-    --bg-dark: #1a1a1a;
+    --bg-dark: #121212;
     --card-bg: #ffffff;
-    --card-bg-dark: #2d2d2d;
+    --card-bg-dark: #1e1e1e;
     --text-dark: #333;
-    --text-light: #f4f4f4;
+    --text-light: #e0e0e0;
     --transition: all 0.3s ease;
 }
 
 /* 1. Custom Scrollbar */
-::-webkit-scrollbar { width: 12px; }
-::-webkit-scrollbar-track { background: #e9ecef; }
-::-webkit-scrollbar-thumb { 
-    background: var(--primary); 
-    border-radius: 10px;
-    border: 3px solid #e9ecef;
-}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
 
 /* 2. Base Styles */
 body {
     margin: 0;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     transition: var(--transition);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* 3. Header & Navigation (Div contains Nav) */
+/* 3. Header & Navigation (This div contains the nav) */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,6 +44,21 @@ body {
     gap: 15px;
 }
 
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* LOGO FIX: This makes the SVG visible in Light Mode */
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    /* This filter turns a light/white SVG into your Primary Blue */
+    filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
+    transition: var(--transition);
+}
+
 .brand-name {
     font-size: 1.8rem;
     color: var(--primary);
@@ -63,45 +71,40 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--text-dark);
     font-weight: 600;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: var(--transition);
 }
 
-.nav-links a.active, .nav-links a:hover {
+.nav-links a:hover {
     background: var(--primary);
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
-/* 4. Professional Theme Toggle */
+/* 4. Theme Toggle Button */
 #theme-toggle {
     background: var(--primary);
     color: white;
     border: none;
-    padding: 8px 18px;
+    padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1.2rem;
-    transition: var(--transition);
+    font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-#theme-toggle:hover {
-    transform: scale(1.05);
-}
-
-/* 5. Hero Cards & Forms */
+/* 5. Hero Cards */
 .hero-card {
     background: var(--card-bg);
-    padding: 3.5rem 2rem;
+    padding: 4rem 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     margin: 40px auto;
@@ -109,89 +112,76 @@ body {
     text-align: center;
 }
 
-form { display: flex; flex-direction: column; gap: 15px; text-align: left; }
-input, textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 .btn-primary {
+    display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 12px;
-    border: none;
+    padding: 12px 30px;
+    text-decoration: none;
     border-radius: 8px;
-    cursor: pointer;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 /* 6. Professional Footer */
 footer {
-    background-color: #222;
-    color: #fff;
-    padding: 3rem 5% 1rem 5%;
-    margin-top: 50px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 4rem 5% 2rem 5%;
+    margin-top: 80px;
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
+.footer-column h4 { color: var(--primary); margin-bottom: 1.2rem; }
 .footer-column ul { list-style: none; padding: 0; }
 .footer-column ul li a { color: #bbb; text-decoration: none; transition: 0.3s; }
-.footer-column ul li a:hover { color: var(--primary); }
-.footer-bottom { text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 15px; color: #888; }
+.footer-column ul li a:hover { color: var(--primary); padding-left: 5px; }
 
-/* 7. Animations */
-.typing-text { color: var(--primary); border-right: 3px solid var(--primary); animation: blink 0.7s infinite; }
-@keyframes blink { 50% { border-color: transparent; } }
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #777;
+    font-size: 0.9rem;
+}
 
-.reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
-/* ==========================================
-   8. DARK MODE OVERRIDES (The "Winner")
-   ========================================== */
+/* 7. DARK MODE OVERRIDES */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
 }
 
-body.dark-mode .header-main-container { background: #000; }
-body.dark-mode .hero-card { background: var(--card-bg-dark); }
-body.dark-mode #theme-toggle { background: #f1c40f; color: #000; }
-body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; border-color: #555; }
+body.dark-mode .header-main-container {
+    background: #000;
+}
 
-/* Desktop View Adjustment */
+body.dark-mode .nav-links a {
+    color: #fff;
+}
+
+/* LOGO FIX: This makes the SVG White/Glow in Dark Mode */
+body.dark-mode .logo-icon {
+    filter: invert(100%) brightness(200%) drop-shadow(0 0 5px var(--primary));
+}
+
+body.dark-mode .hero-card {
+    background: var(--card-bg-dark);
+}
+
+body.dark-mode #theme-toggle {
+    background: #f1c40f;
+    color: #000;
+}
+
+/* Responsive Desktop */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }
-
-.brand-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-icon {
-    width: 40px;  /* Adjust this if you want the spider larger or smaller */
-    height: 40px; /* Keeping it square for the SVG */
-    display: block;
-}
-
-.brand-name {
-    font-size: 1.8rem;
-    color: var(--primary);
-    font-weight: 800;
-    margin: 0;
-    line-height: 1;
-}
-

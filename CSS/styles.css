@@ -194,6 +194,4 @@ body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; b
     margin: 0;
     line-height: 1;
 }
-body.dark-mode .logo-icon {
-    filter: drop-shadow(0 0 8px #007bff) brightness(1.2);
-}
+

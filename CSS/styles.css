@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 2. Header & Navigation (This div contains the nav) */
+/* 2. Header & Navigation */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
@@ -47,15 +47,14 @@ body {
     gap: 18px;
 }
 
-/* 3. The Original logo.svg FIX */
+/* 3. Original logo.svg Branding (FIXED) */
 .logo-icon {
-    width: 65px;         /* Larger size as requested */
+    width: 65px;
     height: 65px;
     object-fit: contain;
     transition: var(--transition);
     
-    /* LIGHT MODE FILTER: Forces the spider AND the web to be Primary Blue */
-    /* This fixes the "invisible web" problem on white backgrounds */
+    /* LIGHT MODE: Strong Blue Filter for visibility on white */
     filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
 }
 
@@ -85,7 +84,7 @@ body {
     transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     background: var(--primary);
     color: #ffffff !important;
 }
@@ -99,10 +98,9 @@ body {
     border-radius: 50px;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: var(--transition);
 }
 
-/* 6. Hero & Content */
+/* 6. Hero/Content Cards */
 .hero-card {
     background: var(--card-bg);
     padding: 4rem 2rem;
@@ -140,7 +138,7 @@ footer {
     color: #777;
 }
 
-/* 8. DARK MODE OVERRIDES */
+/* 8. DARK MODE OVERRIDES (The Blue Glow Fix) */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -154,9 +152,10 @@ body.dark-mode .nav-links a {
     color: #ffffff;
 }
 
-/* DARK MODE LOGO FIX: Forces logo to White/Gold with a Glow */
+/* DARK MODE LOGO FIX: Electric Cyan Web + Bright Spider */
 body.dark-mode .logo-icon {
-    filter: invert(100%) brightness(200%) drop-shadow(0 0 8px var(--primary));
+    /* Brightens the lines and shifts them to a sharp light blue (Cyan) */
+    filter: invert(70%) sepia(80%) saturate(2000%) hue-rotate(170deg) brightness(1.4) drop-shadow(0 0 12px #00e5ff);
 }
 
 body.dark-mode .hero-card {
@@ -168,11 +167,7 @@ body.dark-mode #theme-toggle {
     color: #000000;
 }
 
-/* 9. Animations */
-.typing-text { color: var(--primary); border-right: 3px solid var(--primary); }
-.reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
+/* Responsive Desktop */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }

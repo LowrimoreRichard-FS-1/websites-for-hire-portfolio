@@ -2,18 +2,29 @@
 :root {
     --primary: #007bff;
     --primary-dark: #0056b3;
+    --accent: #2ecc71;
     --bg-light: #f8f9fa;
-    --bg-dark: #121212;
+    --bg-dark: #1a1a1a;
     --card-bg: #ffffff;
-    --card-bg-dark: #1e1e1e;
+    --card-bg-dark: #2d2d2d;
     --text-dark: #333;
-    --text-light: #e0e0e0;
+    --text-light: #f4f4f4;
     --transition: all 0.3s ease;
 }
 
+/* 1. Custom Scrollbar */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #e9ecef; }
+::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
+    border-radius: 10px;
+    border: 3px solid #e9ecef;
+}
+
+/* 2. Base Styles */
 body {
     margin: 0;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     transition: var(--transition);
@@ -21,11 +32,11 @@ body {
     overflow-x: hidden;
 }
 
-/* Header & Nav */
+/* 3. Header & Navigation (Div contains Nav) */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,21 +51,8 @@ body {
     gap: 15px;
 }
 
-.brand-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.logo-icon {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
-    filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
-}
-
 .brand-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary);
     font-weight: 800;
     margin: 0;
@@ -65,128 +63,114 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--primary);
     font-weight: 600;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 5px;
+    transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a.active, .nav-links a:hover {
     background: var(--primary);
-    color: #ffffff !important;
+    color: #fff !important;
 }
 
-/* --- ALIGNMENT FIXES --- */
-.centered-text {
-    text-align: center;
+/* 4. Professional Theme Toggle */
+#theme-toggle {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.left-aligned-spaced {
-    text-align: left;
-    padding: 0 5%;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
+#theme-toggle:hover {
+    transform: scale(1.05);
 }
 
-/* Home Page Hero Styling */
-.hero-section {
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 50vh;
-}
-
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-subtitle {
-    font-size: 1.4rem;
-    color: #555;
-    max-width: 700px;
-}
-
-/* Introduction Page Layout */
-.intro-section {
-    max-width: 1100px;
-    margin: 60px auto;
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.intro-card {
+/* 5. Hero Cards & Forms */
+.hero-card {
     background: var(--card-bg);
-    padding: 40px 20px;
+    padding: 3.5rem 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--primary);
-}
-
-/* Footer Fixes */
-footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 4rem 5% 2rem 5%;
-    margin-top: 100px;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-}
-
-.footer-bottom {
+    margin: 40px auto;
+    max-width: 800px;
     text-align: center;
-    margin-top: 50px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
 }
 
-/* DARK MODE */
+form { display: flex; flex-direction: column; gap: 15px; text-align: left; }
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 6. Professional Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 3rem 5% 1rem 5%;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h4 { color: var(--primary); margin-bottom: 1rem; }
+.footer-column ul { list-style: none; padding: 0; }
+.footer-column ul li a { color: #bbb; text-decoration: none; transition: 0.3s; }
+.footer-column ul li a:hover { color: var(--primary); }
+.footer-bottom { text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 15px; color: #888; }
+
+/* 7. Animations */
+.typing-text { color: var(--primary); border-right: 3px solid var(--primary); animation: blink 0.7s infinite; }
+@keyframes blink { 50% { border-color: transparent; } }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ==========================================
+   8. DARK MODE OVERRIDES (The "Winner")
+   ========================================== */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
 }
 
 body.dark-mode .header-main-container { background: #000; }
-body.dark-mode .nav-links a { color: #fff; }
-body.dark-mode .hero-subtitle { color: #bbb; }
-body.dark-mode .intro-card { background: var(--card-bg-dark); }
-
-body.dark-mode .logo-icon {
-    filter: invert(70%) sepia(80%) saturate(2000%) hue-rotate(170deg) brightness(1.4) drop-shadow(0 0 12px #00e5ff);
-}
-
-#theme-toggle {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
+body.dark-mode .hero-card { background: var(--card-bg-dark); }
 body.dark-mode #theme-toggle { background: #f1c40f; color: #000; }
+body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; border-color: #555; }
 
+/* Desktop View Adjustment */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }

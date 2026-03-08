@@ -1,5 +1,4 @@
-/* --- Master CSS for Websites For Hire --- */
-
+/* --- CSS/styles.css --- */
 :root {
     --primary: #007bff;
     --primary-dark: #0056b3;
@@ -16,8 +15,8 @@
 /* 1. Custom Scrollbar */
 ::-webkit-scrollbar { width: 12px; }
 ::-webkit-scrollbar-track { background: #e9ecef; }
-::-webkit-scrollbar-thumb {
-    background: var(--primary);
+::-webkit-scrollbar-thumb { 
+    background: var(--primary); 
     border-radius: 10px;
     border: 3px solid #e9ecef;
 }
@@ -33,7 +32,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 3. Header & Navigation (Note: This section contains the Nav) */
+/* 3. Header & Navigation (Div contains Nav) */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
@@ -129,7 +128,7 @@ input, textarea {
     font-weight: bold;
 }
 
-/* 6. Professional Footer (Updated to Seattle) */
+/* 6. Professional Footer */
 footer {
     background-color: #222;
     color: #fff;
@@ -152,58 +151,26 @@ footer {
 .footer-bottom { text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 15px; color: #888; }
 
 /* 7. Animations */
-.typing-text {
-    color: var(--primary);
-    border-right: 3px solid var(--primary);
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    letter-spacing: 2px;
-    /* Ensure width starts at 0 for the typing effect */
-    width: 0;
-    animation: 
-        blink 0.7s infinite, 
-        typing 3.5s steps(30, end) forwards;
-}
-
+.typing-text { color: var(--primary); border-right: 3px solid var(--primary); animation: blink 0.7s infinite; }
 @keyframes blink { 50% { border-color: transparent; } }
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
 
 .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* 8. AUTOMATIC NIGHT MODE OVERRIDES */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--bg-dark);
-        color: var(--text-light);
-    }
-    
-    .header-main-container {
-        background: #000;
-        border-bottom: 1px solid #333;
-    }
-
-    .hero-card {
-        background: var(--card-bg-dark);
-        color: white;
-    }
-
-    .brand-name { color: white; }
-    
-    input, textarea {
-        background: #444;
-        color: #fff;
-        border-color: #555;
-    }
+/* ==========================================
+   8. DARK MODE OVERRIDES (The "Winner")
+   ========================================== */
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
-/* 9. Desktop View Adjustments */
+body.dark-mode .header-main-container { background: #000; }
+body.dark-mode .hero-card { background: var(--card-bg-dark); }
+body.dark-mode #theme-toggle { background: #f1c40f; color: #000; }
+body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; border-color: #555; }
+
+/* Desktop View Adjustment */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
-    .nav-links { gap: 20px; }
 }

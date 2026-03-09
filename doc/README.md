@@ -6,6 +6,7 @@
    2. What the website is for to all the users and clients
       **They can hire this company to create and build any type of website
       they need**
+   3. **Footer Nav links neededto be added**
 
 
 

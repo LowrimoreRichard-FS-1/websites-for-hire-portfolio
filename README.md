@@ -21,6 +21,16 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
 - **Modern CSS**: Custom properties (variables), Flexbox, and CSS Grid.
 - **Vanilla JavaScript**: Modern ES6+ logic for high performance.
 
+# There will be updates forthcoming by Webmaster and Owner Richard Lowrimore.
+# Footer Updates
+ - **Contact Info:**
+ - **Owner name**
+ - **Email address**
+ - **Phone Number**
+ - **Company Address**
+
+# Each web page will get updates.
+ 
 ## 📂 Project Structure
 
 ```text
@@ -37,6 +47,4 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
 │   └── script.js          # Master logic script
 └── IMG/                    # Image assets & Logo
 
-#### There will be updates forthcoming by Webmaster and Owner Richard Lowrimore.
 
- -   **Contact Info:**

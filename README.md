@@ -36,3 +36,7 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
 ├── JS/
 │   └── script.js          # Master logic script
 └── IMG/                    # Image assets & Logo
+
+#### There will be updates forthcoming by Webmaster and Owner Richard Lowrimore.
+
+ -   **Contact Info:**

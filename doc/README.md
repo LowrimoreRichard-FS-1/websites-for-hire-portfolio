@@ -10,13 +10,13 @@
 
 ## Website has been created
    - **There is a total of 7 Semantic HTML pages**
-       1.Home Page-Finished
-       2.Introduction Page-Finished
-       3.About Us Page-Finished
-       4.Form Page-Finished
-       5.Interactive JS Page-Finished
-       6.Modern CSS Page-Finished
-       7.Responsive Design Page-Finished
+       - Home Page-Finished
+       - Introduction Page-Finished
+       - About Us Page-Finished
+       - Form Page-Finished
+       - Interactive JS Page-Finished
+       - Modern CSS Page-Finished
+       - Responsive Design Page-Finished
      
 ##  Master External CSS
  - **Advanced and Modern CSS Styles**

@@ -26,10 +26,16 @@
  - **All Script is advanced and Modern**
  - **All JavaScript Scripts is Finished**
 
-## Update 1 to Websites For Hire
+## Update #1 to Websites For Hire
 ## Update to Footer
  - **Add the missing navigation links-Finished**
  - **Give the complete contact information-Finished**
+
+## Update #2 to Websites For Hire
+  **Added Pseudo-classes to Main nav and to Footer Links**
+  - **Pseudo-class-Active**
+  - **Pseudo-class-Visit**
+  - **Pseudo-class-Hover**
 
 
 

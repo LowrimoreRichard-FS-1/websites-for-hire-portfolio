@@ -37,6 +37,17 @@
   - **Pseudo-class-Visit**
   - **Pseudo-class-Hover**
 
+## Creating Prototype Pages to Each Web Page
+ **Total 7 Pages**
+  - **Home Page-Finished**
+  - **Introduction page-Finished**
+  - About Us
+  - Form Page
+  - Responsive Design Page
+  - Modern CSS
+  - Interactive JS
+    
+
 
 
 

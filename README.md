@@ -30,6 +30,17 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
  - **Company Address**
 
 # Each web page will get updates.
+
+## Website will have a Prototype
+# There is 7 Pages
+# Page Names:
+ - **Home Page-Finished**
+ - **Introduction Page-Finished**
+ - About Us Page
+ - Form Page
+ - Responsive Design Page
+ - Modern CSS Page
+ - Interactive JS Page
  
 ## 📂 Project Structure
 

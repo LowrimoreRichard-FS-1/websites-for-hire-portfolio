@@ -40,12 +40,12 @@
 ## Creating Prototype Pages to Each Web Page
  **Total 7 Pages**
   - **Home Page-Finished**
-  - **Introduction page-Finished**
-  - About Us
+  - **Introduction Page-Finished**
+  - **About Us Page-Finished**
   - Form Page
   - Responsive Design Page
-  - Modern CSS
-  - Interactive JS
+  - Modern CSS Page
+  - Interactive JS Page
     
 
 

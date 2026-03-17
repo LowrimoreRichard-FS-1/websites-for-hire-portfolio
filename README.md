@@ -36,7 +36,7 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
 # Page Names:
  - **Home Page-Finished**
  - **Introduction Page-Finished**
- - About Us Page
+ - **About Us Page-Finished**
  - Form Page
  - Responsive Design Page
  - Modern CSS Page

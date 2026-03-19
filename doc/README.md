@@ -44,8 +44,8 @@
   - **About Us Page-Finished**
   - **Form Page-Finished**
   - **Responsive Design Page-Finished**
-  - Modern CSS Page
-  - Interactive JS Page
+  - **Modern CSS Page-Finished**
+  - **Interactive JS Page-Finished**
     
 
 

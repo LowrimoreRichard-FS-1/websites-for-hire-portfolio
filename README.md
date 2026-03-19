@@ -39,8 +39,8 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
  - **About Us Page-Finished**
  - **Form Page-Finished**
  - **Responsive Design Page-Finished**
- - Modern CSS Page
- - Interactive JS Page
+ - **Modern CSS Page-Finished**
+ - **Interactive JS Page-Finished**
  
 ## 📂 Project Structure
 

@@ -41,6 +41,10 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
  - **Responsive Design Page-Finished**
  - **Modern CSS Page-Finished**
  - **Interactive JS Page-Finished**
+
+#### Two Images Is On The Home Page
+ - **Size: width-450px and height-350px**
+ - **Alignments: Image1-Left Image2-Right**
  
 ## 📂 Project Structure
 

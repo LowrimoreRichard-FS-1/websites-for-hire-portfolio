@@ -170,6 +170,14 @@ body.dark-mode .hero-card { background: var(--card-bg-dark); }
 body.dark-mode #theme-toggle { background: #f1c40f; color: #000; }
 body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; border-color: #555; }
 
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 40px;
+    padding: 20px;
+}
+
 /* Desktop View Adjustment */
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }

@@ -49,8 +49,8 @@
 
 #### Added 2 Images to the Home Page
  **Size of each image is: width-450px and height-350px**
- **Alignment of Image 1 is to the left and the right 
-   image is to the right**
+ **Alignment of Image 1 is to the left and
+   the right image is to the right**
     
 
 

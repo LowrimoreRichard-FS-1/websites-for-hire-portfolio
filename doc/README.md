@@ -51,6 +51,10 @@
  **Size of each image is: width-450px and height-350px**
  **Alignment of Image 1 is to the left and
    the right image is to the right**
+
+#### Added 2 Images to the Introduction Page
+ **Size of each image is: 400px wide and 300px height**
+ **Alignment of image 1 image is to the left and the second image is to the right**
     
 
 

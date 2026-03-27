@@ -45,7 +45,12 @@ Welcome to the official repository for **Websites For Hire**. This project is a 
 #### Two Images Is On The Home Page
  - **Size: width-450px and height-350px**
  - **Alignments: Image1-Left Image2-Right**
- 
+
+#### Two Images Is On The Introduction Page
+ - **Size: width-400px and height-300px**
+ - **Alignments: Image1-Left Image2-Right**
+
+    
 ## 📂 Project Structure
 
 ```text
